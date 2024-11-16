@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}My Meetups{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'meetups/base.css' %}">
+    {% block site_css %}{% endblock %}
+  </head>
+  <body>
+  <header style="background-color: #333; color: #fff; padding: 20px; font-family: Arial, sans-serif;">
+    <div style="display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto;">
+        <!-- Logo -->
+        <a href="stage/meetups" id="main-logo" style="color: #ffcc00; font-size: 24px; font-weight: bold; text-decoration: none;">
+            DjangoMeetups
+        </a>
+
+        <!-- Navigation Links -->
+        <nav>
+            <ul style="list-style-type: none; margin: 0; padding: 0; display: flex;">
+                <li style="margin: 0 15px;">
+                    <a href="/stage/meetups" style="color: #fff; text-decoration: none;">Home</a>
+                </li>
+                <li style="margin: 0 15px;">
+                    <a href="/stage/meetups" style="color: #fff; text-decoration: none;">About</a>
+                </li>
+                <li style="margin: 0 15px;">
+                    <a href="/stage/meetups" style="color: #fff; text-decoration: none;">Events</a>
+                </li>
+                <li style="margin: 0 15px;">
+                    <a href="/stage/meetups" style="color: #fff; text-decoration: none;">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <main>
+      {% block body %}{% endblock %}
+    </main>
+  </body>
+
+  <footer style="background-color: #333; color: #fff; padding: 10px; font-family: Arial, sans-serif;">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: 0 auto;">
+        <!-- About Section -->
+        <div style="flex: 1; min-width: 250px;">
+            <h3 style="color: #ffcc00;">About Shaurya</h3>
+            <p>Hi, I'm Shaurya, The best anyone can ever be. :P</p>
+        </div>
+
+        <!-- Contact Section -->
+        <div style="flex: 1; min-width: 150px; ">
+            <h3 style="color: #ffcc00;">Contact</h3>
+            <p>Email: <a href="mailto:shauryakhurana809@gmail.com" style="color: #ffcc00; text-decoration: none;">shauryakhurana809@gmail.com</a></p>
+        </div>
+
+        <!-- Social Links -->
+        <div style="flex: 1; min-width: 250px;">
+            <h3 style="color: #ffcc00;">Follow Me</h3>
+            <p>
+                <a href="#" style="color: #ffcc00; text-decoration: none; margin-right: 10px;">LinkedIn</a> |
+                <a href="#" style="color: #ffcc00; text-decoration: none; margin-left: 10px; margin-right: 10px;">GitHub</a> |
+                <a href="#" style="color: #ffcc00; text-decoration: none; margin-left: 10px;">Twitter</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div style="text-align: center; padding-top: 20px; border-top: 1px solid #555; margin-top: 5px;">
+        <p>&copy; 2024 Shaurya. All rights reserved.</p>
+    </div>
+</footer>
+
+</html>

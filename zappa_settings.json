@@ -1,0 +1,20 @@
+{
+    "test": {
+        "aws_region": "ap-south-1",
+        "django_settings": "ultimate_meetup.settings",
+        "exclude": [
+            "boto3",
+            "dateutil",
+            "botocore",
+            "s3transfer",
+            "concurrent"
+        ],
+        "profile_name": "default",
+        "project_name": "ultimate-meetup",
+        "runtime": "python3.12",
+        "s3_bucket": "ultimate-meetup-test"
+    },
+    "stage": {
+        "extends": "test"
+    }
+}

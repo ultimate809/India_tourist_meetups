@@ -1,0 +1,20 @@
+{% extends 'base/base.html' %}
+
+{% load static %}
+
+{% block title %}Meetup Detail{% endblock %}
+
+{% block site_css %}
+  <link rel="stylesheet" href="{% static 'meetups/meetup-detail.css' %}">
+{% endblock %}
+
+{% block body %}
+<article>
+  <img  src="{{ meetup.image.url }}" alt="{{ meetup.title }}">
+
+  <section id="details">
+    <h2>Successfully Registered for the meetup {{ participant_name }}</h2>
+    <p>{{ meetup.description }}</p>
+  </section>
+</article>
+{% endblock %}
