@@ -11,7 +11,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
-import secret_project_config as secret
+import os
+from . import secret_project_config as secret
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -53,9 +54,13 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     'ultimate_meetup.middleware.URLRewriteMiddleware',
+    # 'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = "ultimate_meetup.urls"
+# APPEND_SLASH = True
+# env = os.getenv("ENVIRONMENT", "test")
+# FORCE_SCRIPT_NAME = f'/{env}/'
 
 TEMPLATES = [
     {

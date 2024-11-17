@@ -17,6 +17,11 @@ main {
   font-size: 2rem;
 }
 
+#confirmation h3 {
+  color: inherit;
+  font-size: 1rem;
+}
+
 #confirmation p {
   font-size: 1.25rem;
 }

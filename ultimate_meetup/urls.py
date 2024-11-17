@@ -31,6 +31,6 @@ urlpatterns = [
     path(f"admin/", admin.site.urls),
     path(f"", RedirectView.as_view(url="meetups")),
     path(f"meetups/",include("meetups.urls")),
-    re_path(f"stage/" + r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
-    re_path(f"stage/" + r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT})
+    re_path(f"{env}/" + r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
+    re_path(f"{env}/" + r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT})
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
