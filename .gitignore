@@ -1,2 +1,3 @@
 ultimate_meetup/secret_project_config.py
 **/__pycache__/
+welcome_email/email_creds.py

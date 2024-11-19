@@ -94,11 +94,11 @@ WSGI_APPLICATION = "ultimate_meetup.wsgi.application"
 DATABASES = {
     "default": {
         'ENGINE': 'django.db.backends.mysql',  # or 'django.db.backends.postgresql'
-        'HOST': 'stage-meetups-db.c5q44qqu64f3.ap-south-1.rds.amazonaws.com',
+        'HOST': 'meetup-db-prod.c5q44qqu64f3.ap-south-1.rds.amazonaws.com',
         'PORT': '3306',
         'USER': secret.DB_USER,
         'PASSWORD': secret.DB_PASSWORD,
-        'NAME': 'meetupsDB',
+        'NAME': 'meetupdb',
     }
 }
 

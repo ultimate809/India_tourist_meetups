@@ -7,14 +7,22 @@
             "dateutil",
             "botocore",
             "s3transfer",
-            "concurrent"
+            "concurrent",
+            "welcome_email",
+            "Dockerfile"
         ],
         "profile_name": "default",
         "project_name": "ultimate-meetup",
-        "runtime": "python3.12",
-        "s3_bucket": "ultimate-meetup-test"
+        "runtime": "python3.12"
     },
     "stage": {
         "extends": "test"
+    },
+    "prod": {
+        "extends": "test",
+        "vpc_config" : {
+            "SubnetIds": [ "subnet-0fdbbda1571fbd609","subnet-07861116f586ae3d1","subnet-01118ffab6f5e9b03" ],
+            "SecurityGroupIds": [ "sg-0a4720e4d2a5594e2" ]
+        }
     }
 }
